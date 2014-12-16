@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="Stopwatch" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00:00:00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAT-Su-BtC">
+                                <rect key="frame" x="198" y="275" width="204" height="49"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="cFz-gP-4GZ"/>
+                                    <constraint firstAttribute="height" constant="49" id="hTl-RK-h9x"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="53"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bjm-aR-9Bl">
+                                <rect key="frame" x="198" y="332" width="33" height="30"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="startTimer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="0k1-Gp-3SS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VN2-1z-xlQ">
+                                <rect key="frame" x="369" y="332" width="33" height="30"/>
+                                <state key="normal" title="Stop">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="stopTimer:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3jQ-a3-66v"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VN2-1z-xlQ" firstAttribute="trailing" secondItem="fAT-Su-BtC" secondAttribute="trailing" id="0Rp-fq-BK0"/>
+                            <constraint firstAttribute="centerX" secondItem="fAT-Su-BtC" secondAttribute="centerX" id="Fkl-tW-7AQ"/>
+                            <constraint firstItem="bjm-aR-9Bl" firstAttribute="top" secondItem="fAT-Su-BtC" secondAttribute="bottom" constant="8" id="TP5-Qh-6cN"/>
+                            <constraint firstItem="bjm-aR-9Bl" firstAttribute="leading" secondItem="fAT-Su-BtC" secondAttribute="leading" id="Wkc-XK-zhv"/>
+                            <constraint firstItem="VN2-1z-xlQ" firstAttribute="top" secondItem="fAT-Su-BtC" secondAttribute="bottom" constant="8" id="gbY-Dk-f18"/>
+                            <constraint firstAttribute="centerY" secondItem="fAT-Su-BtC" secondAttribute="centerY" id="wN9-M4-lZ0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="stopButton" destination="VN2-1z-xlQ" id="UtO-13-Tdo"/>
+                        <outlet property="timerLabel" destination="fAT-Su-BtC" id="liQ-vY-zow"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="379" y="330"/>
+        </scene>
+    </scenes>
+</document>
