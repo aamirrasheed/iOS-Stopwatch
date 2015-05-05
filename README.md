@@ -7,7 +7,7 @@ and stop buttons in both portrait and landscape layout.
 New things I learned:
 
 1. How to use Auto Layout
-2. 
+
 2. How to use NSTimer
 
 Things that can be improved: 
