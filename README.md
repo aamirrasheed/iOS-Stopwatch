@@ -11,6 +11,7 @@ New things I learned:
 2. How to use NSTimer
 
 Things that can be improved: 
+
 1. Better-looking UI
 
 2. Add functionality for laps
